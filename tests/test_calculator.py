@@ -1,10 +1,7 @@
-import calculator
+from app import calculator
 
-x = 5
-y = 3
+def test_addition():
+    assert calculator.addition(5, 3) == 8
 
-somme = calculator.addition(x, y)
-produit = calculator.multiplication(x, y)
-
-print("Addition :", somme)
-print("Multiplication :", produit)
+def test_multiplication():
+    assert calculator.multiplication(5, 3) == 15
