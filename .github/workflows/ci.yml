@@ -25,7 +25,7 @@ jobs:
         pip install pytest
 
     - name: Lancer les tests
-      run: pytest tests/
+      run: PYTHONPATH=. pytest tests/
 
     - name: Login Docker Hub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
